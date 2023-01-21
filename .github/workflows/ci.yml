@@ -14,6 +14,9 @@ jobs:
     - name: Install dependencies
       run: |
         make -f ./introduction/python-scaffold/Makefile install
+    - name: Check for PEP8 violations
+      run: |
+        make -f ./introduction/python-scaffold/Makefile format-checks
     - name: Analysing the code with pylint
       run: |
         make -f ./introduction/python-scaffold/Makefile lint

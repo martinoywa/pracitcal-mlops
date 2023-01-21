@@ -1,3 +1,5 @@
 pylint
 pytest
 pytest-cov
+pycodestyle
+autopep8
