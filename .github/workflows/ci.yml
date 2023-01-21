@@ -11,15 +11,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: 3.9
-    - name: Change directory to scaffold
-      run: |
-        ls
     - name: Install dependencies
       run: |
-        make install
+        make -f /introduction/python-scaffold/Makefile install
     - name: Analysing the code with pylint
       run: |
-        make lint
+        make -f /introduction/python-scaffold/Makefile lint
     - name: Test code coverage with pytest
       run: |
-        make test
+        make -f /introduction/python-scaffold/Makefile test
