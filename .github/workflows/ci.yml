@@ -13,7 +13,7 @@ jobs:
         python-version: 3.9
     - name: Change directory to scaffold
       run: |
-        cd introduction/python-scaffold/
+        pwd
     - name: Install dependencies
       run: |
         make install
