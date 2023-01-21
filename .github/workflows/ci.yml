@@ -13,10 +13,10 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        make -f /introduction/python-scaffold/Makefile install
+        make -f ./introduction/python-scaffold/Makefile install
     - name: Analysing the code with pylint
       run: |
-        make -f /introduction/python-scaffold/Makefile lint
+        make -f ./introduction/python-scaffold/Makefile lint
     - name: Test code coverage with pytest
       run: |
-        make -f /introduction/python-scaffold/Makefile test
+        make -f ./introduction/python-scaffold/Makefile test
