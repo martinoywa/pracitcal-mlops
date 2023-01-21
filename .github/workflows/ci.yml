@@ -13,7 +13,7 @@ jobs:
         python-version: 3.9
     - name: Change directory to scaffold
       run: |
-        cd /home/runner/work/pracitcal-mlops/pracitcal-mlops/introduction/python-scaffold & pwd
+        ls
     - name: Install dependencies
       run: |
         make install
