@@ -11,9 +11,9 @@ LABELS = {
 }
 
 
-def output_formatter(list):
-    label = LABELS[list[0]["label"]]
-    confidence = list[0]["score"]
+def output_formatter(pred):
+    label = LABELS[pred[0]["label"]]
+    confidence = pred[0]["score"]
     return {
         "label": label,
         "confidence": confidence
@@ -27,11 +27,11 @@ def home():
 @app.route("/api/v1/sentiment")
 def predict_sentiment():
     pipe = pipeline(model="cardiffnlp/twitter-roberta-base-sentiment")
-    input = request.args.get("input")
-    pred = pipe(input)
+    text = request.args.get("input")
+    pred = pipe(text)
 
     return jsonify({"prediction": output_formatter(pred)})
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

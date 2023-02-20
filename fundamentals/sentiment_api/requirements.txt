@@ -2,3 +2,4 @@ flask
 transformers
 pytest
 pytest-cov
+pylint
