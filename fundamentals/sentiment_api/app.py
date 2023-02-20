@@ -19,6 +19,7 @@ def output_formatter(pred):
         "confidence": confidence
     }
 
+
 @app.route("/api/v1")
 def home():
     return "Welcome to the sentiment API."
@@ -34,4 +35,4 @@ def predict_sentiment():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=10010, debug=True)

@@ -1,4 +1,4 @@
-from fundamentals.sentiment_api.app.app import output_formatter
+from app import output_formatter
 
 
 def test_output_formatter():
